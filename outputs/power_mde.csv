@@ -1,0 +1,3 @@
+metric,baseline,n_per_arm_observed,mde_abs_pp_80pct_power,n_per_arm_to_detect_0.5pp
+retention_1,0.4481879194630872,44700,0.931946000194625,155292
+retention_7,0.19020134228187918,44700,0.7354622543033184,96714

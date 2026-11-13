@@ -1,0 +1,13 @@
+,value
+rows,90189.0
+unique_users,90189.0
+duplicate_userids,0.0
+null_cells,0.0
+n_gate_30,44700.0
+n_gate_40,45489.0
+max_gamerounds,49854.0
+second_max_gamerounds,2961.0
+zero_round_users_gate_30,1937.0
+zero_round_users_gate_40,2057.0
+srm_chi2,6.9024049496058275
+srm_p_value,0.008607987810836262
