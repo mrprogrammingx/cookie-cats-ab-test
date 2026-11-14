@@ -56,13 +56,13 @@ sql/04_engagement_and_buckets.sql median via window functions, retention by roun
 src/analysis.py                   all tests, bootstrap, Holm correction, power, charts, Tableau exports
 src/validate_sql_duckdb.py        runs the SQL in DuckDB and checks it equals the Python numbers
 outputs/                          results as CSV, charts, Tableau-ready table
-INTERVIEW_GUIDE.md                questions to be ready for
+requirements.txt                  Python dependencies
 ```
 
 ## Reproduce
 
 ```bash
-pip install pandas numpy scipy matplotlib duckdb
+pip install -r requirements.txt
 python src/analysis.py               # writes everything in outputs/
 python src/validate_sql_duckdb.py    # SQL vs Python cross-check
 ```
