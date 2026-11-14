@@ -23,6 +23,10 @@ wait or pay to continue). The experiment moved the first gate from **level 30 (c
 survives a multiple-testing correction. The 1-day and engagement differences are not statistically
 distinguishable from zero.
 
+## Dashboard and charts
+
+[Interactive Tableau Public dashboard](https://public.tableau.com/app/profile/amir.zare8388/viz/CookieCatsABTestGatePlacement/Dashboard1)
+
 ![Retention by gate placement](outputs/retention_by_variant.png)
 ![Game rounds distribution](outputs/gamerounds_distribution.png)
 
