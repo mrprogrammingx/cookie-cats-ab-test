@@ -23,6 +23,9 @@ wait or pay to continue). The experiment moved the first gate from **level 30 (c
 survives a multiple-testing correction. The 1-day and engagement differences are not statistically
 distinguishable from zero.
 
+![Retention by gate placement](outputs/retention_by_variant.png)
+![Game rounds distribution](outputs/gamerounds_distribution.png)
+
 ## Checks that change how much to trust the result
 
 - **Sample ratio mismatch (SRM):** 44,700 vs 45,489 players (49.56% / 50.44%). A 50/50 split would be expected;
@@ -69,14 +72,23 @@ python src/validate_sql_duckdb.py    # SQL vs Python cross-check
 
 ### Run the SQL in BigQuery
 
+Replace `YOUR_PROJECT` with your own Google Cloud project ID.
+
 ```bash
 bq mk --dataset YOUR_PROJECT:ab_test
+
 bq load --source_format=CSV --skip_leading_rows=1 ab_test.cookie_cats data/cookie_cats.csv \
   userid:INTEGER,version:STRING,sum_gamerounds:INTEGER,retention_1:BOOLEAN,retention_7:BOOLEAN
+
+bq query --use_legacy_sql=false --dataset_id=YOUR_PROJECT:ab_test < sql/02_sample_ratio_check.sql
+bq query --use_legacy_sql=false --dataset_id=YOUR_PROJECT:ab_test < sql/03_retention_ztest.sql
 ```
 
-Set `ab_test` as the default dataset (or prefix the table name), then run files `01` to `04`.
-The SQL was validated in DuckDB and uses only standard functions, so BigQuery should return the same figures.
+Files `01` and `04` contain several statements, so run them one at a time in the BigQuery console
+with `ab_test` as the default dataset.
+
+The SQL uses only standard functions. I validated all four files in DuckDB, and ran `02` and `03` in
+BigQuery with identical results (7-day retention 19.02% vs 18.20%, difference -0.82 pp, z = -3.16).
 
 ### Tableau Public
 
