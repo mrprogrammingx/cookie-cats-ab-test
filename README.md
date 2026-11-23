@@ -25,11 +25,10 @@ distinguishable from zero.
 
 ## Dashboard and charts
 
-[Interactive Tableau Public dashboard](https://public.tableau.com/app/profile/amir.zare8388/viz/CookieCatsABTestGatePlacement/Dashboard1)
-
-[Kaggle notebook: Cookie Cats A/B test, gate_30 vs gate_40](https://www.kaggle.com/code/amirzaredev/cookie-cats-a-b-test-gate-30-vs-40)
-
-[Hugging Face Space: A/B test analyzer](https://huggingface.co/spaces/amirzaredev/ab-test-analyzer)
+- [Interactive Tableau Public dashboard](https://public.tableau.com/app/profile/amir.zare8388/viz/CookieCatsABTestGatePlacement/Dashboard1)
+- [Kaggle notebook: Cookie Cats A/B test, gate_30 vs gate_40](https://www.kaggle.com/code/amirzaredev/cookie-cats-a-b-test-gate-30-vs-40)
+- **[Try it live: A/B Test Analyzer on Hugging Face](https://huggingface.co/spaces/amirzaredev/ab-test-analyzer)**: paste your own numbers or a CSV and get the same checks (SRM, Holm, power).
+- [Project page](https://amir-zare.com/projects/cookie-cats-ab-test/)
 
 ![Retention by gate placement](outputs/retention_by_variant.png)
 ![Game rounds distribution](outputs/gamerounds_distribution.png)
