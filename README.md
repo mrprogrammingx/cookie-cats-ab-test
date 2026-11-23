@@ -29,6 +29,8 @@ distinguishable from zero.
 
 [Kaggle notebook: Cookie Cats A/B test, gate_30 vs gate_40](https://www.kaggle.com/code/amirzaredev/cookie-cats-a-b-test-gate-30-vs-40)
 
+[Hugging Face Space: A/B test analyzer](https://huggingface.co/spaces/amirzaredev/ab-test-analyzer)
+
 ![Retention by gate placement](outputs/retention_by_variant.png)
 ![Game rounds distribution](outputs/gamerounds_distribution.png)
 
